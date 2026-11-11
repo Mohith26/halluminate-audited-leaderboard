@@ -48,7 +48,7 @@ At 300 audits the active method is 26% narrower than correcting the raw verifier
     node --test test/audit.test.mjs
     python3 -m http.server 8000   # then open http://localhost:8000
 
-No build step. The CI workflow is in `ci/test.yml` (move it to `.github/workflows/` to activate; the publishing token here lacks the `workflow` scope).
+No build step. GitHub Actions (`.github/workflows/test.yml`) runs the tests and the report on ubuntu-latest on every push.
 
 ## Tests
 
