@@ -111,7 +111,7 @@ function auditedView() {
       </div>
       ${summaryTable()}`,
     caption: S.log.length
-      ? `Sorted by audited score. ${S.audited.size} of ${B.attempts.length.toLocaleString()} attempts audited by experts (${(100 * S.audited.size / B.attempts.length).toFixed(1)}%); mean 95% interval ±${f3(mean(S.est.map((e) => 1.96 * e.se)))}. Click a column or row for its audits.`
+      ? `Synthetic replica: expert grades and judge errors are simulated; verifier means match the published leaderboard. Sorted by audited score. ${S.audited.size} of ${B.attempts.length.toLocaleString()} attempts audited by experts (${(100 * S.audited.size / B.attempts.length).toFixed(1)}%); mean 95% interval ±${f3(mean(S.est.map((e) => 1.96 * e.se)))}. Click a column or row for its audits.`
       : 'No audits yet: bars show verifier scores. Approve the first expert batch below to start.',
   };
 }
