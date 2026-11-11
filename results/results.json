@@ -12,16 +12,16 @@
   },
   "at300": {
    "halfWidth": {
-    "expertOnly": 0.13198,
+    "expertOnly": 0.13202,
     "ppiRaw": 0.04736,
     "calibratedUniform": 0.0382,
-    "active": 0.03505
+    "active": 0.03498
    },
    "narrowerThanExpertOnly": 3.77,
-   "narrowerThanPpiRawPct": 26,
-   "narrowerThanCalibratedUniformPct": 8.2,
-   "ppiRawAuditsToMatch": 546,
-   "coverage200reps": 0.9519,
+   "narrowerThanPpiRawPct": 26.1,
+   "narrowerThanCalibratedUniformPct": 8.4,
+   "ppiRawAuditsToMatch": 548,
+   "coverage200reps": 0.9517,
    "meanAbsError": 0.0145
   },
   "defaultState": {
@@ -105,11 +105,11 @@
     },
     {
      "config": "Model E · CU + TU",
-     "verifier": 0.5449,
-     "audited": 0.5485,
-     "lo": 0.5005,
-     "hi": 0.5965,
-     "truth": 0.5172,
+     "verifier": 0.5445,
+     "audited": 0.5481,
+     "lo": 0.5001,
+     "hi": 0.5961,
+     "truth": 0.5168,
      "rank": [
       2,
       10
@@ -141,23 +141,23 @@
     },
     {
      "config": "Model A · CU + TU",
-     "verifier": 0.5131,
-     "audited": 0.5152,
-     "lo": 0.493,
-     "hi": 0.5373,
-     "truth": 0.4942,
+     "verifier": 0.5127,
+     "audited": 0.5147,
+     "lo": 0.4926,
+     "hi": 0.5369,
+     "truth": 0.4938,
      "rank": [
-      6,
+      7,
       11
      ]
     },
     {
      "config": "Model F · native CLI",
-     "verifier": 0.4967,
-     "audited": 0.5118,
-     "lo": 0.4664,
-     "hi": 0.5573,
-     "truth": 0.4763,
+     "verifier": 0.4965,
+     "audited": 0.5116,
+     "lo": 0.4661,
+     "hi": 0.5571,
+     "truth": 0.4761,
      "rank": [
       5,
       12
@@ -255,52 +255,52 @@
   "expertOnly": [
    {
     "audits": 60,
-    "halfWidth": 0.36817,
+    "halfWidth": 0.36827,
     "coverage": 0.825
    },
    {
     "audits": 120,
-    "halfWidth": 0.21529,
-    "coverage": 0.875
+    "halfWidth": 0.21533,
+    "coverage": 0.8764
    },
    {
     "audits": 180,
-    "halfWidth": 0.17453,
+    "halfWidth": 0.17459,
     "coverage": 0.9028
    },
    {
     "audits": 240,
-    "halfWidth": 0.14931,
+    "halfWidth": 0.14936,
     "coverage": 0.9125
    },
    {
     "audits": 300,
-    "halfWidth": 0.13198,
+    "halfWidth": 0.13202,
     "coverage": 0.9097
    },
    {
     "audits": 360,
-    "halfWidth": 0.11944,
+    "halfWidth": 0.11949,
     "coverage": 0.9194
    },
    {
     "audits": 420,
-    "halfWidth": 0.10888,
+    "halfWidth": 0.10892,
     "coverage": 0.9361
    },
    {
     "audits": 480,
-    "halfWidth": 0.10098,
+    "halfWidth": 0.10102,
     "coverage": 0.9306
    },
    {
     "audits": 540,
-    "halfWidth": 0.09422,
-    "coverage": 0.9208
+    "halfWidth": 0.09426,
+    "coverage": 0.9222
    },
    {
     "audits": 600,
-    "halfWidth": 0.08888,
+    "halfWidth": 0.08891,
     "coverage": 0.9264
    }
   ],
@@ -359,7 +359,7 @@
   "calibratedUniform": [
    {
     "audits": 60,
-    "halfWidth": 0.07152,
+    "halfWidth": 0.07151,
     "coverage": 0.85
    },
    {
@@ -370,7 +370,7 @@
    {
     "audits": 180,
     "halfWidth": 0.0489,
-    "coverage": 0.9486
+    "coverage": 0.9472
    },
    {
     "audits": 240,
@@ -411,7 +411,7 @@
   "active": [
    {
     "audits": 60,
-    "halfWidth": 0.07152,
+    "halfWidth": 0.07151,
     "coverage": 0.85
    },
    {
@@ -426,38 +426,38 @@
    },
    {
     "audits": 240,
-    "halfWidth": 0.03963,
+    "halfWidth": 0.0396,
     "coverage": 0.9556
    },
    {
     "audits": 300,
-    "halfWidth": 0.03505,
+    "halfWidth": 0.03498,
     "coverage": 0.9431
    },
    {
     "audits": 360,
-    "halfWidth": 0.03172,
+    "halfWidth": 0.03168,
     "coverage": 0.9514
    },
    {
     "audits": 420,
     "halfWidth": 0.02927,
-    "coverage": 0.95
+    "coverage": 0.9514
    },
    {
     "audits": 480,
-    "halfWidth": 0.02711,
+    "halfWidth": 0.02713,
     "coverage": 0.9528
    },
    {
     "audits": 540,
     "halfWidth": 0.02532,
-    "coverage": 0.9472
+    "coverage": 0.9486
    },
    {
     "audits": 600,
     "halfWidth": 0.02377,
-    "coverage": 0.9569
+    "coverage": 0.9514
    }
   ]
  }

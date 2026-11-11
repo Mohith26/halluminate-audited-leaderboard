@@ -19,14 +19,16 @@
 // residual S_i - s_i, using Beta posteriors of each agentic check's false-pass and
 // false-fail rates (partially pooled toward the check family). Floors keep every pi_i > 0.
 
+import { dexp, dlog, dsin, dcos, dpow } from './detmath.js';
+
 export function mulberry32(seed) {
   let a = seed >>> 0;
   return () => { a = (a + 0x6d2b79f5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 }
-const gauss = (r) => { let u = 0, v = 0; while (u === 0) u = r(); while (v === 0) v = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
-const sig = (x) => 1 / (1 + Math.exp(-x));
+const gauss = (r) => { let u = 0, v = 0; while (u === 0) u = r(); while (v === 0) v = r(); return Math.sqrt(-2 * dlog(u)) * dcos(2 * Math.PI * v); };
+const sig = (x) => 1 / (1 + dexp(-x));
 const betaDraw = (r, a, b) => { // via two gammas (Marsaglia-Tsang), adequate for a > 0.3
-  const g = (k) => { if (k < 1) return g(k + 1) * Math.pow(r(), 1 / k); const d = k - 1 / 3, c = 1 / Math.sqrt(9 * d); for (;;) { let x, v; do { x = gauss(r); v = 1 + c * x; } while (v <= 0); v = v * v * v; const u = r(); if (u < 1 - 0.0331 * x ** 4 || Math.log(u) < 0.5 * x * x + d * (1 - v + Math.log(v))) return d * v; } };
+  const g = (k) => { if (k < 1) return g(k + 1) * dpow(r(), 1 / k); const d = k - 1 / 3, c = 1 / Math.sqrt(9 * d); for (;;) { let x, v; do { x = gauss(r); v = 1 + c * x; } while (v <= 0); v = v * v * v; const u = r(); if (u < 1 - 0.0331 * (x * x) * (x * x) || dlog(u) < 0.5 * x * x + d * (1 - v + dlog(v))) return d * v; } };
   const x = g(a), y = g(b); return x / (x + y);
 };
 
@@ -177,7 +179,7 @@ export function predictor(bench, post, mode = 'calibrated') {
     });
     if (mode !== 'raw') pred[i] = e;
     // residual SD around the predictor actually used (raw adds its bias to the spread)
-    sd[i] = Math.sqrt(v2 + (mode === 'raw' ? (e - attempts[i].s) ** 2 : 0));
+    sd[i] = Math.sqrt(v2 + (mode === 'raw' ? (e - attempts[i].s) * (e - attempts[i].s) : 0));
   }
   return { pred, sd };
 }
@@ -267,7 +269,7 @@ export function expertOnly(bench, audited, z = 1.96) {
   for (const i of audited) { const A = bench.attempts[i]; by[A.config].push(A.S); }
   return PUBLISHED.map((P, j) => {
     const x = by[j], n = x.length, m = x.reduce((a, b) => a + b, 0) / Math.max(1, n);
-    const v = n > 1 ? x.reduce((a, b) => a + (b - m) ** 2, 0) / (n - 1) : 0.25;
+    const v = n > 1 ? x.reduce((a, b) => a + (b - m) * (b - m), 0) / (n - 1) : 0.25;
     const se = Math.sqrt((1 - n / Nj[j]) * v / Math.max(1, n));
     return { ...P, est: m, se, lo: m - z * se, hi: m + z * se, truth: truth[j] / Nj[j], audits: n };
   });
@@ -292,14 +294,14 @@ export function betaTail(a, b, x0) {
   // P(X > x0), X ~ Beta(a,b); midpoint rule on [x0,1] with log-space density
   const lb = lgamma(a + b) - lgamma(a) - lgamma(b);
   const n = 400; let s = 0;
-  for (let k = 0; k < n; k++) { const x = x0 + ((k + 0.5) * (1 - x0)) / n; s += Math.exp(lb + (a - 1) * Math.log(x) + (b - 1) * Math.log(1 - x)); }
+  for (let k = 0; k < n; k++) { const x = x0 + ((k + 0.5) * (1 - x0)) / n; s += dexp(lb + (a - 1) * dlog(x) + (b - 1) * dlog(1 - x)); }
   return Math.min(1, Math.max(0, (s * (1 - x0)) / n));
 }
 function lgamma(z) { // Lanczos
   const g = 7, c = [0.99999999999980993, 676.5203681218851, -1259.1392167224028, 771.32342877765313, -176.61502916214059, 12.507343278686905, -0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7];
-  if (z < 0.5) return Math.log(Math.PI / Math.sin(Math.PI * z)) - lgamma(1 - z);
+  if (z < 0.5) return dlog(Math.PI / dsin(Math.PI * z)) - lgamma(1 - z);
   z -= 1; let x = c[0]; for (let i = 1; i < g + 2; i++) x += c[i] / (z + i); const t = z + g + 0.5;
-  return 0.5 * Math.log(2 * Math.PI) + (z + 0.5) * Math.log(t) - t + Math.log(x);
+  return 0.5 * dlog(2 * Math.PI) + (z + 0.5) * dlog(t) - t + dlog(x);
 }
 export function triage(bench, post, threshold = 0.2) {
   return bench.checks.filter((c) => c.kind === 'agentic').map((c) => {

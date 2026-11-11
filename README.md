@@ -35,7 +35,7 @@ Everything runs in the browser (`src/audit.js`, no dependencies) in about 20 ms 
 | Calibrated verifier + uniform audits | ±0.059 | ±0.038 | ±0.027 | 95.1% |
 | Calibrated verifier + active audits (this) | ±0.056 | ±0.035 | ±0.024 | 94.3% |
 
-At 300 audits the active method is 26% narrower than correcting the raw verifier with uniform audits, which needs about 546 audits to match it; mean absolute error 0.015. In the replica the published verifier scores overstate the truth by 0.023 on average (up to 0.057) and 4 configurations sit at a different rank. In the default page state (seed 7, 5 batches, 344 audits) 17 of 18 intervals cover the truth and 4 of the top 10 triaged checks are among the 35 simulated weak checks.
+At 300 audits the active method is 26% narrower than correcting the raw verifier with uniform audits, which needs about 548 audits to match it; mean absolute error 0.015. In the replica the published verifier scores overstate the truth by 0.023 on average (up to 0.057) and 4 configurations sit at a different rank. In the default page state (seed 7, 5 batches, 344 audits) 17 of 18 intervals cover the truth and 4 of the top 10 triaged checks are among the 35 simulated weak checks.
 
 ## Data
 
@@ -52,7 +52,7 @@ No build step. The CI workflow is in `ci/test.yml` (move it to `.github/workflow
 
 ## Tests
 
-15 tests: the committed data equals the seeded generator's output; the shape and the verifier-graded means match the post; auditing everything recovers the truth exactly; **property tests** that the active and the uniform estimators are unbiased over 150 seeded runs each; inclusion probabilities hit the batch size, stay in (0, 1] and are monotone; posterior counts; predictor identity when judges agree with zero error; Beta tail against closed forms; rank intervals with zero error; audit-queue ordering; triage ordering; and the **headline** (3.77x, coverage, half-width recomputed with the report's seeds) plus the default page state.
+16 tests: the committed data equals the seeded generator's output byte for byte on any platform (`src/detmath.js` implements exp/log/sin/cos with only correctly rounded IEEE operations, because V8's `Math.exp`/`Math.log` can differ in the last bit between macOS arm64 and Linux x86-64; a test pins exact values and checks they stay within 2 ulp of `Math.*`); the shape and the verifier-graded means match the post; auditing everything recovers the truth exactly; **property tests** that the active and the uniform estimators are unbiased over 150 seeded runs each; inclusion probabilities hit the batch size, stay in (0, 1] and are monotone; posterior counts; predictor identity when judges agree with zero error; Beta tail against closed forms; rank intervals with zero error; audit-queue ordering; triage ordering; and the **headline** (3.77x, coverage, half-width recomputed with the report's seeds) plus the default page state.
 
 ## Limitations
 
