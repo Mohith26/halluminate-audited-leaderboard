@@ -245,7 +245,8 @@ function renderEff() {
   const a3 = RES.summary.at300;
   $('#eff').innerHTML = `<div class="lc-fig aud-lc"><div class="lc-title">Interval width as expert audits grow</div>
     <div style="padding:2px 4px 8px"><span class="mtog-lbl">Focus</span>${SERIES.map(([k, l]) => `<button type="button" class="mtog" data-focus="${k}" aria-pressed="${k === focus}">${esc(l)}</button>`).join('')}</div>
-    <div class="lc-body"><svg class="pc-svg" viewBox="0 0 920 438" role="img" aria-label="Mean 95% interval half-width versus expert audits for four methods">${svg}</svg></div>
+    <div class="lc-body"><svg class="pc-svg" viewBox="0 0 920 438" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" role="img" aria-label="Mean 95% interval half-width versus expert audits for four methods">${svg}</svg></div>
+    <div class="aud-lclegend">${SERIES.map(([k, l, d]) => `<span><svg width="26" height="8" aria-hidden="true"><line x1="1" y1="4" x2="25" y2="4" stroke="${k === focus ? 'var(--sky)' : 'var(--viz-context)'}" stroke-width="2.6"${d ? ` stroke-dasharray="${d}"` : ''}/></svg>${esc(l)}</span>`).join('')}</div>
     <p class="fig-source">Each point averages 40 simulated audit runs; lines differ only in how audits are chosen and what they correct. Source: concept, synthetic replica of Due Diligence Bench</p></div>
     <p class="aud-note">At 300 audits: ±${a3.halfWidth.active.toFixed(3)} with active audits, ${a3.narrowerThanExpertOnly}x narrower than averaging expert grades alone (±${a3.halfWidth.expertOnly.toFixed(3)}) and ${a3.narrowerThanPpiRawPct}% narrower than correcting the raw verifier with uniform audits, which needs about ${a3.ppiRawAuditsToMatch} audits to match. Intervals covered the hidden truth ${(100 * a3.coverage200reps).toFixed(1)}% of the time over 200 replays.</p>`;
 }
