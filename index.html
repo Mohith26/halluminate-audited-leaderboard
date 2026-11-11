@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audited leaderboard · Westworld Finance Diligence Bench (concept)</title>
+<meta name="description" content="Concept feature for Halluminate: expert spot-checks turned into unbiased, calibrated benchmark scores, with an active audit queue and verifier triage.">
+<link rel="icon" href="https://www.halluminate.ai/static/images/hicon.svg?v=4" type="image/svg+xml">
+<link rel="preload" href="https://www.halluminate.ai/static/fonts/Octave-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilex:wght@500&display=swap">
+<link rel="stylesheet" href="assets/halluminate.css">
+<link rel="stylesheet" href="assets/ddb.css">
+<link rel="stylesheet" href="assets/audit.css">
+</head>
+<body>
+<header class="rail">
+  <a href="https://www.halluminate.ai/" class="rail-logo">
+    <svg class="rail-mark" viewBox="0 0 104 101" aria-hidden="true">
+      
+      <defs>
+        <radialGradient id="rail-mark-glass" cx="50%" cy="38%" r="60%">
+          <stop offset="0" style="stop-color:var(--powder)"/>
+          <stop offset="1" style="stop-color:var(--sky)"/>
+        </radialGradient>
+      </defs>
+      <path class="glass" d="M52.0 6.5A28.48 28.48 0 0 1 80.47 34.98C80.47 46.7 73.78 53.4 69.17 59.68C65.82 64.29 63.73 68.47 63.73 73.5H40.27C40.27 68.47 38.18 64.29 34.83 59.68C30.22 53.4 23.52 46.7 23.52 34.98A28.48 28.48 0 0 1 52.0 6.5Z" fill="url(#rail-mark-glass)"/>
+      <path class="outline" d="M52.0 6.5A28.48 28.48 0 0 1 80.47 34.98C80.47 46.7 73.78 53.4 69.17 59.68C65.82 64.29 63.73 68.47 63.73 73.5H40.27C40.27 68.47 38.18 64.29 34.83 59.68C30.22 53.4 23.52 46.7 23.52 34.98A28.48 28.48 0 0 1 52.0 6.5Z" pathLength="1" fill="none" stroke-linejoin="round" style="stroke:var(--g09);stroke-width:13"/>
+      <rect class="bar" x="38" y="88" width="28" height="13" style="fill:var(--g09)"/>
+    </svg>
+    <svg class="rail-word" viewBox="0 0 4710 711" fill-rule="evenodd" style="fill:var(--g09)" role="img" aria-label="Halluminate">
+      
+      <path style="--i:0" d="M445.00 700.00C445.00 700.00 445.00 381.00 445.00 381.00C445.00 381.00 92.00 381.00 92.00 381.00C92.00 381.00 92.00 700.00 92.00 700.00C92.00 700.00 0.00 700.00 0.00 700.00C0.00 700.00 0.00 0.00 0.00 0.00C0.00 0.00 92.00 0.00 92.00 0.00C92.00 0.00 92.00 304.00 92.00 304.00C92.00 304.00 445.00 304.00 445.00 304.00C445.00 304.00 445.00 0.00 445.00 0.00C445.00 0.00 537.00 0.00 537.00 0.00C537.00 0.00 537.00 700.00 537.00 700.00C537.00 700.00 445.00 700.00 445.00 700.00Z"/>
+      <path style="--i:1" d="M956.39 700.00C956.39 700.00 953.39 637.00 953.39 637.00C919.39 686.00 865.39 711.00 791.39 711.00C688.39 711.00 626.39 655.00 626.39 568.00C626.39 416.00 788.39 406.00 949.39 397.00C949.39 397.00 949.39 372.00 949.39 372.00C949.39 304.00 916.39 268.00 842.39 268.00C774.39 268.00 734.39 302.00 732.39 355.00C732.39 355.00 646.39 355.00 646.39 355.00C650.39 257.00 732.39 203.00 842.39 203.00C1000.39 203.00 1034.39 289.00 1034.39 396.00C1034.39 396.00 1034.39 563.00 1034.39 563.00C1034.39 606.00 1035.39 642.00 1038.39 700.00C1038.39 700.00 956.39 700.00 956.39 700.00ZM949.39 459.00C823.39 467.00 712.39 476.00 712.39 568.00C712.39 616.00 751.39 647.00 811.39 647.00C891.39 647.00 949.39 604.00 949.39 494.00C949.39 494.00 949.39 459.00 949.39 459.00Z"/>
+      <path style="--i:2" d="M1217.99 700.00C1217.99 700.00 1130.99 700.00 1130.99 700.00C1130.99 700.00 1130.99 0.00 1130.99 0.00C1130.99 0.00 1217.99 0.00 1217.99 0.00C1217.99 0.00 1217.99 700.00 1217.99 700.00Z"/>
+      <path style="--i:3" d="M1406.18 700.00C1406.18 700.00 1319.18 700.00 1319.18 700.00C1319.18 700.00 1319.18 0.00 1319.18 0.00C1319.18 0.00 1406.18 0.00 1406.18 0.00C1406.18 0.00 1406.18 700.00 1406.18 700.00Z"/>
+      <path style="--i:4" d="M1593.38 214.00C1593.38 214.00 1593.38 516.00 1593.38 516.00C1593.38 591.00 1624.38 641.00 1698.38 641.00C1787.38 641.00 1832.38 568.00 1832.38 478.00C1832.38 478.00 1832.38 214.00 1832.38 214.00C1832.38 214.00 1919.38 214.00 1919.38 214.00C1919.38 214.00 1919.38 563.00 1919.38 563.00C1919.38 605.00 1920.38 652.00 1922.38 700.00C1922.38 700.00 1837.38 700.00 1837.38 700.00C1837.38 700.00 1835.38 622.00 1835.38 622.00C1807.38 678.00 1753.38 711.00 1675.38 711.00C1567.38 711.00 1504.38 651.00 1504.38 539.00C1504.38 539.00 1504.38 214.00 1504.38 214.00C1504.38 214.00 1593.38 214.00 1593.38 214.00Z"/>
+      <path style="--i:5" d="M2662.57 700.00C2662.57 700.00 2662.57 397.00 2662.57 397.00C2662.57 316.00 2627.57 273.00 2561.57 273.00C2482.57 273.00 2431.57 336.00 2431.57 432.00C2431.57 432.00 2431.57 700.00 2431.57 700.00C2431.57 700.00 2343.57 700.00 2343.57 700.00C2343.57 700.00 2343.57 400.00 2343.57 400.00C2343.57 317.00 2308.57 273.00 2240.57 273.00C2160.57 273.00 2109.57 336.00 2109.57 434.00C2109.57 434.00 2109.57 700.00 2109.57 700.00C2109.57 700.00 2022.57 700.00 2022.57 700.00C2022.57 700.00 2022.57 351.00 2022.57 351.00C2022.57 309.00 2021.57 262.00 2019.57 214.00C2019.57 214.00 2104.57 214.00 2104.57 214.00C2104.57 214.00 2106.57 291.00 2106.57 291.00C2134.57 234.00 2189.57 203.00 2263.57 203.00C2340.57 203.00 2390.57 235.00 2414.57 298.00C2450.57 234.00 2506.57 203.00 2584.57 203.00C2692.57 203.00 2751.57 263.00 2751.57 372.00C2751.57 372.00 2751.57 700.00 2751.57 700.00C2751.57 700.00 2662.57 700.00 2662.57 700.00Z"/>
+      <path style="--i:6" d="M2847.65 89.00C2847.65 89.00 2847.65 0.00 2847.65 0.00C2847.65 0.00 2942.65 0.00 2942.65 0.00C2942.65 0.00 2942.65 89.00 2942.65 89.00C2942.65 89.00 2847.65 89.00 2847.65 89.00ZM2938.65 214.00C2938.65 214.00 2938.65 700.00 2938.65 700.00C2938.65 700.00 2851.65 700.00 2851.65 700.00C2851.65 700.00 2851.65 214.00 2851.65 214.00C2851.65 214.00 2938.65 214.00 2938.65 214.00Z"/>
+      <path style="--i:7" d="M3369.45 700.00C3369.45 700.00 3369.45 398.00 3369.45 398.00C3369.45 323.00 3338.45 273.00 3263.45 273.00C3173.45 273.00 3127.45 346.00 3127.45 436.00C3127.45 436.00 3127.45 700.00 3127.45 700.00C3127.45 700.00 3040.45 700.00 3040.45 700.00C3040.45 700.00 3040.45 351.00 3040.45 351.00C3040.45 309.00 3039.45 262.00 3037.45 214.00C3037.45 214.00 3122.45 214.00 3122.45 214.00C3122.45 214.00 3124.45 292.00 3124.45 292.00C3152.45 236.00 3207.45 203.00 3286.45 203.00C3395.45 203.00 3458.45 263.00 3458.45 375.00C3458.45 375.00 3458.45 700.00 3458.45 700.00C3458.45 700.00 3369.45 700.00 3369.45 700.00Z"/>
+      <path style="--i:8" d="M3858.55 700.00C3858.55 700.00 3855.55 637.00 3855.55 637.00C3821.55 686.00 3767.55 711.00 3693.55 711.00C3590.55 711.00 3528.55 655.00 3528.55 568.00C3528.55 416.00 3690.55 406.00 3851.55 397.00C3851.55 397.00 3851.55 372.00 3851.55 372.00C3851.55 304.00 3818.55 268.00 3744.55 268.00C3676.55 268.00 3636.55 302.00 3634.55 355.00C3634.55 355.00 3548.55 355.00 3548.55 355.00C3552.55 257.00 3634.55 203.00 3744.55 203.00C3902.55 203.00 3936.55 289.00 3936.55 396.00C3936.55 396.00 3936.55 563.00 3936.55 563.00C3936.55 606.00 3937.55 642.00 3940.55 700.00C3940.55 700.00 3858.55 700.00 3858.55 700.00ZM3851.55 459.00C3725.55 467.00 3614.55 476.00 3614.55 568.00C3614.55 616.00 3653.55 647.00 3713.55 647.00C3793.55 647.00 3851.55 604.00 3851.55 494.00C3851.55 494.00 3851.55 459.00 3851.55 459.00Z"/>
+      <path style="--i:9" d="M4057.44 281.00C4057.44 281.00 3970.44 281.00 3970.44 281.00C3970.44 281.00 3970.44 214.00 3970.44 214.00C3970.44 214.00 4057.44 214.00 4057.44 214.00C4057.44 214.00 4057.44 107.00 4057.44 107.00C4057.44 107.00 4144.44 74.00 4144.44 74.00C4144.44 74.00 4144.44 214.00 4144.44 214.00C4144.44 214.00 4249.44 214.00 4249.44 214.00C4249.44 214.00 4249.44 281.00 4249.44 281.00C4249.44 281.00 4144.44 281.00 4144.44 281.00C4144.44 281.00 4144.44 573.00 4144.44 573.00C4144.44 624.00 4164.44 638.00 4213.44 638.00C4227.44 638.00 4241.44 637.00 4252.44 636.00C4252.44 636.00 4252.44 704.00 4252.44 704.00C4235.44 707.00 4209.44 709.00 4182.44 709.00C4104.44 709.00 4057.44 680.00 4057.44 598.00C4057.44 598.00 4057.44 281.00 4057.44 281.00Z"/>
+      <path style="--i:10" d="M4705.03 548.00C4687.03 653.00 4609.03 711.00 4494.03 711.00C4350.03 711.00 4269.03 619.00 4269.03 458.00C4269.03 304.00 4353.03 203.00 4494.03 203.00C4642.03 203.00 4710.03 301.00 4710.03 472.00C4710.03 472.00 4710.03 475.00 4710.03 475.00C4710.03 475.00 4355.03 475.00 4355.03 475.00C4358.03 576.00 4413.03 647.00 4496.03 647.00C4564.03 647.00 4604.03 610.00 4618.03 548.00C4618.03 548.00 4705.03 548.00 4705.03 548.00ZM4622.03 413.00C4619.03 329.00 4573.03 267.00 4493.03 267.00C4417.03 267.00 4365.03 323.00 4358.03 413.00C4358.03 413.00 4622.03 413.00 4622.03 413.00Z"/>
+    </svg>
+  </a>
+  <button class="rail-menu" type="button" aria-expanded="false" aria-controls="rail-nav" aria-label="Open menu">
+    <svg viewBox="0 0 22 12" aria-hidden="true"><rect width="22" height="1.5"/><rect y="10.5" width="22" height="1.5"/></svg>
+  </button>
+  
+  <nav class="rail-nav" id="rail-nav" aria-label="Global">
+    <a href="https://www.halluminate.ai/research" aria-current="page">Research</a>
+    <a href="https://www.halluminate.ai/experts">Expert Network</a>
+    <a href="https://jobs.ashbyhq.com/halluminate" target="_blank" rel="noopener">Careers<span class="rail-ext" aria-hidden="true"> ↗&#xFE0E;</span></a>
+    <a href="https://www.halluminate.ai/data-partnerships">Data Partnerships</a>
+  </nav>
+  <script>
+    
+    (function () {
+      var button = document.querySelector('.rail-menu');
+      function setOpen(open) {
+        document.documentElement.classList.toggle('menu-open', open);
+        button.setAttribute('aria-expanded', String(open));
+        button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      button.addEventListener('click', function () { setOpen(button.getAttribute('aria-expanded') !== 'true'); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+      window.addEventListener('pageshow', function () { setOpen(false); });
+    })();
+  </script>
+</header>
+<div class="page">
+<main>
+  <article>
+    <header class="post-head">
+      <h1 class="h3">Westworld Finance Diligence Bench <span class="quiet">Audited leaderboard: expert spot-checks turned into calibrated scores</span></h1>
+      <time>Concept · November 2026</time>
+    </header>
+    <div class="post-body prose">
+      <div class="ddb" id="app" aria-busy="true">
+        <p>Every score on the leaderboard is a verifier grade, and most of a task's weight sits on agentic checks that can pass work an expert would fail. This view takes the expert audits you already run, picks which attempts to audit next, and turns the audits into an unbiased score for every configuration with a 95% interval, plus a ranked list of the verifiers most likely to be passing bad work.</p>
+        <div data-figure="leaderboard" class="chart" id="board"><div class="chart-body"><p class="chart-title">Westworld Finance Diligence Benchmark Leaderboard</p><div class="chart-view"><p class="aud-loading">Loading benchmark…</p></div></div></div>
+        <div id="drill"></div>
+        <h4 class="ta-l1">Next expert batch</h4>
+        <div id="queue" class="aud-frame"></div>
+        <h4 class="ta-l1">Verifier triage</h4>
+        <div id="triage" class="aud-frame"></div>
+        <h4 class="ta-l1">How many audits it takes</h4>
+        <div id="eff"></div>
+        <h4 class="ta-l1">Method</h4>
+        <div id="method"></div>
+        <p class="aud-foot">Unofficial concept demo by Mohith Gajjela. Not affiliated with Halluminate. Synthetic data: a replica with the published benchmark's shape (88 tasks in 7 categories, 18 configurations, 3 attempts) whose verifier-graded means equal the post's leaderboard; configurations are anonymized and verifier error rates are simulated, so the hidden truth is known and coverage can be checked. <a href="https://github.com/Mohith26/halluminate-audited-leaderboard">Source</a></p>
+      </div>
+    </div>
+  </article>
+  <nav class="post-others" aria-label="Other articles">
+    <p>Other Articles</p>
+    <a href="https://www.halluminate.ai/blog/due-diligence-bench">Westworld Finance Diligence Bench (original post)<span aria-hidden="true">&rarr;</span></a>
+    <a href="https://www.halluminate.ai/blog/how-ai-agents-vote">Which way do AI agents vote?<span aria-hidden="true">&rarr;</span></a>
+    <a href="https://www.halluminate.ai/blog/series-a">Series A<span aria-hidden="true">&rarr;</span></a>
+    <a href="https://www.halluminate.ai/blog/sim-to-real-webagents">Simulated-to-Real Transfer for Web Agents: A small scale study<span aria-hidden="true">&rarr;</span></a>
+    
+  </nav>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <script>
+    (function () {
+      var fill = document.querySelector('.scroll-progress span');
+      function update() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        fill.style.setProperty('--progress', max > 0 ? Math.min(1, window.scrollY / max) : 1);
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
+</main>
+</div>
+<div class="aud-toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>

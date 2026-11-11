@@ -1,0 +1,219 @@
+/* Figure styles from the Westworld Finance Diligence Bench post (inline <style> in halluminate.ai/blog/due-diligence-bench), reused verbatim. */
+
+.ddb > * + * {margin-top:24px;}
+.ddb p {margin:0;}
+.ddb * + p {margin-top:24px;}
+.ddb b, .ddb strong {font-weight:400;}
+.ddb svg text {font-family:var(--font); font-weight:400;}
+
+/* Section headings: gray number, dark title, hairline above. */
+.ddb h4.ta-l1 {margin:96px 0 0; padding-top:24px; border-top:1px solid var(--g09); font-size:24px; line-height:28px; letter-spacing:-0.9px; color:var(--g09);}
+.ddb h5.ta-l2 {margin:24px 0 0; font-size:14px; line-height:20px; letter-spacing:0; font-weight:400;}
+.ddb h5.ta-l2 + p {margin-top:0; font-size:14px; line-height:20px; letter-spacing:0; color:var(--g05);}
+.ddb .lead-in {margin-top:96px; padding-top:24px; border-top:1px solid var(--g09); font-size:30px; line-height:32px; letter-spacing:-1px; color:var(--g05);}
+.ddb .lead-in h2, .ddb .lead-in p {display:inline; margin:0; padding:0; border:0; font:inherit; letter-spacing:inherit;}
+.ddb .lead-in h2 {color:var(--g09);}
+.ddb .lead-in + * {margin-top:36px;}
+
+/* Term lists: dark term, gray description, no markers. */
+.ddb ul.kp, .ddb ul.pw-list {padding:0; list-style:none; color:var(--g05);}
+.ddb ul.kp li + li, .ddb ul.pw-list li + li {margin-top:0;}
+.ddb ul.kp b, .ddb ul.pw-list a {color:var(--g09);}
+.ddb ul.kp.bulleted {padding-left:1.25em; list-style:disc;}
+.ddb ul.pw-list a {text-decoration:none;}
+.ddb ul.pw-list a:hover {color:var(--accent-text);}
+
+/* Figure containers share one frame: hairlines top and bottom, title, then content. */
+.ddb .exw, .ddb .qc-win, .ddb .hm-fig, .ddb .lc-fig, .ddb .t2fig, .ddb .png-fig, .ddb .hrow > div {margin:48px 0 0; padding:20px 0; border-top:1px solid var(--g03); border-bottom:1px solid var(--g03);}
+.ddb .exw-title, .ddb .qc-bar h4, .ddb .hm-title, .ddb .lc-title, .ddb .t2fig h3, .ddb .vlab {display:block; margin:0; padding:0; border:0; font-size:18px; line-height:24px; letter-spacing:-0.2px; font-weight:400; color:var(--g09); text-align:left; text-transform:none;}
+.ddb .fig-source {margin-top:12px; font-size:12px; line-height:16px; letter-spacing:0; color:var(--g07);}
+.ddb .pc-svg {display:block; width:100%; height:auto;}
+.ddb .exw-prompt, .ddb .exw-frow, .ddb .exw-rubric, .ddb pre, .ddb .mock-files, .ddb .mock-term {font-variant-ligatures:none;}
+
+/* Underline tabs (walkthrough, context, verifiers, quality checks). */
+.ddb .exw-toggle, .ddb .exw-htabs, .ddb .qc-tabs {display:flex; flex-wrap:wrap; gap:4px 20px; margin-top:8px;}
+.ddb .exw-toggle button, .ddb .exw-htabs button, .ddb .qc-tab, .ddb .exw-chip {padding:0; border:0; background:none; font-size:14px; line-height:20px; letter-spacing:0; color:var(--g07); cursor:pointer; white-space:nowrap;}
+.ddb .exw-toggle button:hover, .ddb .exw-htabs button:hover, .ddb .qc-tab:hover, .ddb .exw-chip:hover {color:var(--accent-text);}
+.ddb .exw-toggle button.on, .ddb .exw-htabs button.on, .ddb .qc-tab.on, .ddb .exw-chip.on {color:var(--g09); text-decoration:underline 3px var(--accent); text-underline-offset:4px;}
+.ddb .exw-htabs svg {display:none;}
+.ddb .exw-htabs .cnt:before {content:" ";}
+
+/* Boxed tabs (performance views, judge toggles) match the leaderboard. */
+.ddb .qc-tabs.boxed, .ddb .segf, .ddb .tabbox .exw-toggle, .ddb .tabbox .qc-tabs {display:flex; flex-wrap:wrap; gap:0; margin:20px 0 0;}
+.ddb .qc-tabs.boxed .qc-tab, .ddb .segf button, .ddb .tabbox .exw-toggle button, .ddb .tabbox .qc-tab {height:32px; margin-right:-1px; padding:0 16px; border:1px solid var(--g03); background:var(--g01); font-size:14px; letter-spacing:0; color:var(--g07); text-decoration:none; cursor:pointer;}
+.ddb .qc-tabs.boxed .qc-tab:hover, .ddb .segf button:hover, .ddb .tabbox .exw-toggle button:hover, .ddb .tabbox .qc-tab:hover {color:var(--accent-text); text-decoration:none;}
+.ddb .qc-tabs.boxed .qc-tab.on, .ddb .segf button.on, .ddb .tabbox .exw-toggle button.on, .ddb .tabbox .qc-tab.on {position:relative; border-color:var(--accent); background:var(--accent); color:var(--g09);}
+/* Tabbed boxes (sample task, quality checks): a hairline window whose gray header holds the title and
+   the boxed top-level tabs; tabs nested inside the body keep the underline style. */
+.ddb .tabbox {padding:0; border:1px solid var(--g03); background:var(--g01);}
+.ddb .tabbox .exw-bar, .ddb .tabbox .qc-bar {padding:20px 24px 0; background:var(--g02);}
+.ddb .tabbox .exw-bar {padding-bottom:20px; border-bottom:1px solid var(--g03);}
+.ddb .tabbox .exw-toggle {margin:16px 0 0;}
+.ddb .tabbox .qc-tabs {margin:0; padding:16px 24px 20px; background:var(--g02); border-bottom:1px solid var(--g03);}
+.ddb .tabbox .exw-panel, .ddb .tabbox .qc-body {padding:24px;}
+.ddb .tabbox .exw-toggle button, .ddb .tabbox .qc-tab {margin-bottom:-1px; padding:0 12px;}
+
+/* Sample task walkthrough */
+.ddb .exw-bar {display:block;}
+.ddb .exw-view {overflow:hidden; transition:height .3s ease;}
+.ddb .exw-track {display:flex; width:300%; align-items:flex-start; transition:transform .35s ease;}
+.ddb .exw-panel {flex:0 0 33.3333%; width:33.3333%; padding-top:24px; font-size:14px; line-height:20px; letter-spacing:0; color:var(--g07);}
+.ddb .exw-h {margin:0 0 12px; font-size:14px; line-height:20px; color:var(--g09);}
+.ddb .exw-h.two {margin-top:32px;}
+.ddb .exw-prompt {padding-top:16px; border-top:1px solid var(--g09); font-family:var(--mono); font-weight:500; font-size:12px; line-height:20px;}
+.ddb .exw-pop {display:none; margin-top:16px;}
+.ddb .exw-pop.on {display:block;}
+.ddb .exw-pop > p + p, .ddb .exw-pop .exw-tools, .ddb .exw-pop .exw-note {margin-top:12px;}
+.ddb .exw-pop code {font-family:var(--mono); font-size:12px;}
+.ddb .exw-hr {margin:24px 0 0; border:0; border-top:1px solid var(--g09);}
+.ddb .exw-pop.dcard .dhd {display:flex; margin:0 0 4px;}
+.ddb .dhd + p {margin-top:0;}
+.ddb .exw-pop.dcard .dhd svg {display:none;}
+.ddb .exw-pop.dcard .dhd h5 {margin:0; font-size:14px; line-height:20px; font-weight:400; color:var(--g09);}
+.ddb .exw-actlabel {margin:12px 0 4px; color:var(--g09);}
+.ddb .exw-tools {display:block;}
+.ddb .exw-tools span {color:var(--g09);}
+.ddb .exw-tools span + span:before {content:" · "; color:var(--g05);}
+.ddb .exw-note, .ddb .exw-guihint, .ddb .exw-verlead, .ddb .exw-more {margin:12px 0 0; color:var(--g07);}
+.ddb .exw-table {width:100%; border-collapse:collapse; font-size:12px; line-height:16px;}
+.ddb table.exw-table th, .ddb table.exw-table td {padding:6px 12px 6px 0; border:0; border-bottom:1px solid var(--g09); color:var(--g09); font-weight:400; text-align:left; vertical-align:top;}
+.ddb .exw-table thead th {color:var(--g07); border-bottom-color:var(--g04);}
+.ddb .exw-table thead tr:first-child th {color:var(--g09); font-size:14px; border-bottom:0;}
+.ddb .exw-table tbody th {white-space:nowrap;}
+/* data room file row + click-to-open preview */
+.ddb .exw-frow {display:flex; align-items:baseline; gap:8px; padding:8px 10px; background:var(--accent); box-shadow:inset 0 0 0 1px var(--viz-edge); color:var(--g09); font-family:var(--mono); font-weight:500; font-size:12px;}
+.ddb .exw-frow.click {cursor:pointer;}
+.ddb .exw-frow.click:hover {box-shadow:inset 0 0 0 2px var(--viz-edge);}
+.ddb .exw-frow svg {display:none;}
+.ddb .exw-frow .path {min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.ddb .exw-frow .sz {flex:none;}
+.ddb .exw-frow .sz:before {content:"· ";}
+.ddb .exw-fwin {display:none; margin-top:16px;}
+.ddb .exw-fwin.on {display:block;}
+.ddb .wbar .dots, .ddb .wbar svg {display:none;}
+.ddb .exw-fwin .wbar {display:none;}
+.ddb .exw-fwin .exw-table tr.exw-morerow {display:none;}
+/* two-pane viewers (email, chat, notes) */
+.ddb .exw-app {display:flex; gap:24px;}
+.ddb .exw-app .side {flex:0 0 38%; max-width:250px;}
+.ddb .exw-app .main {flex:1 1 auto; min-width:0;}
+.ddb .exw-app .shead, .ddb .exw-app .stitle {margin-bottom:4px; color:var(--g09);}
+.ddb .exw-app .srch {display:block; margin-bottom:8px;}
+.ddb .exw-app .row {display:block; margin:0 0 8px -6px; padding:2px 6px;}
+.ddb .exw-app .row.on {background:var(--accent); box-shadow:inset 0 0 0 1px var(--viz-edge);}
+.ddb .exw-app .row .r1 {display:block;}
+.ddb .exw-app .row .dt:before {content:" · ";}
+.ddb .exw-app .row.on .nm {color:var(--g09);}
+.ddb .exw-mail .h {margin-bottom:12px; color:var(--g09);}
+.ddb .exw-chat .m {margin-bottom:12px;}
+.ddb .exw-chat .who {display:block; color:var(--g09);}
+.ddb .exw-md h6 {margin:0; font-size:14px; font-weight:400; color:var(--g09);}
+.ddb .exw-md .sub {margin:12px 0 0; color:var(--g09);}
+.ddb .exw-md ul {padding-left:1em;}
+.ddb .exw-md li + li {margin-top:0;}
+/* GUI & tools: outlined icons on the desktop screenshot open a gray tool panel */
+.ddb .exw-desk {position:relative; margin-top:16px; line-height:0;}
+.ddb .exw-deskimg {position:relative;}
+.ddb .exw-shot {display:block; width:100%; margin:0;}
+.ddb .exw-chips {display:none;}
+.ddb .appspot {position:absolute; margin:0; padding:0; border:2px solid rgba(255,255,255,.95); border-radius:0; background:none; box-shadow:0 0 0 1px var(--g09); cursor:pointer;}
+.ddb .appspot:hover, .ddb .appspot.on {border-color:var(--accent); box-shadow:0 0 0 1px var(--viz-edge);}
+.ddb .appspot:after {content:attr(data-label); position:absolute; left:50%; bottom:100%; margin-bottom:6px; padding:2px 6px; transform:translateX(-50%); background:var(--g09); color:var(--g01); font-size:12px; line-height:16px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity .15s;}
+.ddb .appspot:hover:after, .ddb .appspot.on:after {opacity:1;}
+.ddb .exw-bubble {display:none; position:absolute; top:3%; right:0; z-index:6; width:62%; max-height:90%; flex-direction:column; padding:18px; background:var(--g02); line-height:20px;}
+.ddb .exw-bubble.on {display:flex;}
+.ddb .exw-bubble .wbar {display:flex; align-items:baseline; justify-content:space-between; gap:12px;}
+.ddb .exw-bubble .wbar h5 {margin:0; font-size:18px; line-height:24px; font-weight:400; color:var(--g09);}
+.ddb .exw-bubble .wbar .ct {flex:none; color:var(--g09);}
+.ddb .exw-bubble .wbody {min-height:0; overflow-y:auto; margin-top:4px;}
+.ddb .exw-bubble .wbody p {color:var(--g05);}
+.ddb .exw-bubble .exw-actlabel {margin-top:12px;}
+.ddb .exw-bubble .exw-tools span {color:var(--g07);}
+.ddb .exw-bubble .exw-tools span + span:before {content:" • ";}
+/* Verifiers: disclosure rows on dark rules */
+.ddb .exw-tabwrap.ver details {border-top:1px solid var(--g09);}
+.ddb .exw-tabwrap.ver details:last-child {border-bottom:1px solid var(--g09);}
+.ddb .exw-tabwrap.ver .exw-pop > .exw-verlead {margin-bottom:12px;}
+.ddb .exw-tabwrap.ver summary {display:flex; justify-content:space-between; padding:6px 0; color:var(--g09); list-style:none; cursor:pointer;}
+.ddb .exw-tabwrap.ver summary::-webkit-details-marker {display:none;}
+.ddb .exw-tabwrap.ver summary:after {content:"\25BC"; font-size:10px;}
+.ddb .exw-tabwrap.ver details[open] summary:after {content:"\25B2";}
+.ddb .exw-tabwrap.ver details p {margin:0; padding:0 0 12px 12px;}
+.ddb .exw-rubric {margin:0; padding:0; background:none; font-family:var(--mono); font-weight:500; font-size:12px; line-height:20px; color:var(--g07); white-space:pre-wrap;}
+
+/* Halluminate harness disclosure */
+.ddb details.hz-drop {border-top:1px solid var(--g09); border-bottom:1px solid var(--g09);}
+.ddb details.hz-drop summary {padding:12px 0; font-size:24px; line-height:28px; letter-spacing:-0.9px; list-style:none; cursor:pointer;}
+.ddb details.hz-drop summary::-webkit-details-marker {display:none;}
+.ddb details.hz-drop summary:before {content:"\25BA"; display:inline-block; width:32px; font-size:20px;}
+.ddb details.hz-drop[open] summary:before {content:"\25BC";}
+.ddb details.hz-drop .hz-body {padding-bottom:24px; font-size:14px; line-height:20px; letter-spacing:0;}
+.ddb details.hz-drop .hz-body > * + * {margin-top:12px;}
+
+/* Quality checks */
+.ddb .qc-body {padding-top:24px;}
+.ddb .qc-pane {display:none; font-size:14px; line-height:20px; letter-spacing:0; color:var(--g07);}
+.ddb .qc-pane.on {display:block;}
+.ddb .qc-pane > * + * {margin-top:12px;}
+.ddb .qc-pane code {font:inherit;}
+.ddb .qc-pane .qf-lbl, .ddb .qc-pane .qf-ex b:first-child, .ddb .qc-pane .mock-cap {display:block; margin:24px 0 16px; padding-bottom:8px; border-bottom:1px solid var(--g09); color:var(--g09);}
+.ddb .qc-pane .mock-cap svg {display:none;}
+.ddb .qc-pane .qf-lbl + pre {margin-top:0;}
+.ddb .qc-pane pre {padding:0; background:none; font-family:var(--mono); font-weight:500; font-size:12px; line-height:20px; color:var(--g07); white-space:pre; overflow-x:auto;}
+.ddb .qc-pane .qf-ex {margin-top:0;}
+.ddb .qc-pane ul.qf-list, .ddb .qc-pane ol.qc-olist {padding:0; list-style:none;}
+.ddb .qc-pane ul.qf-list li + li, .ddb .qc-pane ol.qc-olist li + li {margin-top:0;}
+.ddb .qc-pane ul.qf-list ul.qf-list {padding-left:1em;}
+.ddb .qc-pane b {color:var(--g09);}
+.ddb .qc-pane .mock {margin-top:0;}
+.ddb .qc-pane table.sheet {width:100%; border-collapse:collapse; font-size:12px; line-height:16px;}
+.ddb .qc-pane table.sheet th, .ddb .qc-pane table.sheet td {padding:8px 12px 8px 0; border:0; border-bottom:1px solid var(--g03); color:var(--g07); font-weight:400; text-align:left; vertical-align:top;}
+.ddb .qc-pane table.sheet thead th, .ddb .qc-pane table.sheet .rh {color:var(--g05);}
+.ddb .qc-pane .miss {padding:1px 4px; background:var(--accent); box-shadow:inset 0 0 0 1px var(--viz-edge); color:var(--g09);}
+.ddb .qc-pane table.sheet td.miss {padding-left:6px;}
+.ddb .qc-pane .mock-files, .ddb .qc-pane .mock-term {font-family:var(--mono); font-weight:500; font-size:12px; line-height:20px; color:var(--g08); white-space:pre-wrap;}
+.ddb .qc-pane .mock-term .err {color:var(--g09);}
+
+/* Line charts with model toggles, and their hover tooltip */
+.ddb .mtog-lbl {margin-right:8px; font-size:12px; color:var(--g07);}
+.ddb .mtog {display:inline-flex; align-items:center; margin:4px 4px 0 0; padding:2px 8px; border:1px solid var(--g03); background:var(--g01); font-size:12px; line-height:16px; letter-spacing:0; color:var(--g09); cursor:pointer;}
+.ddb .mtog:hover {color:var(--accent-text);}
+.ddb .mtog[aria-pressed="true"] {border-color:var(--accent); background:var(--accent); color:var(--g09);}
+/* Model-keyed line charts: every model in context gray; the focused model is sky blue on a deep blue edge. */
+.ddb #lc-svg *, .ddb #ms-svg * {pointer-events:none;}
+.ddb #lc-hit, .ddb #ms-hit {pointer-events:all;}
+.ddb .lc-fig .ln {stroke:var(--viz-context);}
+.ddb .lc-fig .edge {stroke:var(--viz-edge); visibility:hidden;}
+.ddb .lc-fig .pt, .ddb .lc-fig .hd {fill:var(--viz-context);}
+.ddb .lc-fig .ln.hl {stroke:var(--sky);}
+.ddb .lc-fig .edge.hl {visibility:visible;}
+.ddb .lc-fig .pt.hl, .ddb .lc-fig .hd.hl {fill:var(--sky); stroke:var(--viz-edge); stroke-width:1px;}
+.ddb .lc-fig .flabel {font-size:12.5px; fill:var(--g09); stroke:var(--g01); stroke-width:3px; paint-order:stroke;}
+.ddb .lc-body {position:relative;}
+.ddb .lc-tip {position:absolute; top:44px; display:none; min-width:150px; padding:8px 10px; border:1px solid var(--g03); background:var(--g01); font-size:12px; line-height:16px; letter-spacing:0; pointer-events:none; z-index:3;}
+.ddb .lc-tip .lc-tip-h {display:flex; justify-content:space-between; gap:18px; margin-bottom:6px; color:var(--g09);}
+.ddb .lc-tip .lc-tip-cap {color:var(--g05);}
+.ddb .lc-tip .lc-tip-r {display:flex; align-items:center; gap:6px; color:var(--g07); white-space:nowrap;}
+.ddb .lc-tip .lc-tip-r .sw {flex:none; display:block;}
+.ddb .lc-tip .lc-tip-r .nm {flex:1 1 auto;}
+.ddb .lc-tip .lc-tip-r .nm i {font-style:normal; color:var(--g05);}
+.ddb .lc-tip .lc-tip-r b {margin-left:8px; color:var(--g09);}
+
+.ddb table.sumtable {margin-top:0;}
+.ddb .sumtable-wrap {overflow-x:auto;}
+.ddb .png-fig iframe {display:block;}
+
+@media (max-width:720px){
+  /* The dock icons are ~10px wide and 10px apart on a phone: name the apps in tappable buttons instead. */
+  .ddb .exw-chips {display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:12px; line-height:20px;}
+  .ddb .tabbox .qc-tabs {display:grid; grid-template-columns:1fr 1fr;}
+  .ddb .qc-pane pre {white-space:pre-wrap; overflow-wrap:anywhere;}
+  .ddb .tabbox .exw-bar, .ddb .tabbox .qc-bar {padding-left:16px; padding-right:16px;}
+  .ddb .tabbox .qc-tabs {padding-left:16px; padding-right:16px;}
+  .ddb .tabbox .exw-panel, .ddb .tabbox .qc-body {padding:16px;}
+  .ddb .lead-in {font-size:24px; line-height:28px; letter-spacing:-0.9px;}
+  .ddb .exw-app {flex-direction:column; gap:12px;}
+  .ddb .exw-app .side {flex:none; max-width:none;}
+  .ddb .exw-bubble {position:static; width:auto; max-height:none;}
+  .ddb .exw-table {font-size:11px;}
+}

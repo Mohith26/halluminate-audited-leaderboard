@@ -1,0 +1,464 @@
+{
+ "generatedFrom": "data/bench.json",
+ "summary": {
+  "attempts": 4752,
+  "agenticChecks": 480,
+  "weakChecks": 35,
+  "naive": {
+   "meanInflation": 0.0226,
+   "maxInflation": 0.0565,
+   "configsMovingRank": 4,
+   "discordantPairs": 3
+  },
+  "at300": {
+   "halfWidth": {
+    "expertOnly": 0.13198,
+    "ppiRaw": 0.04736,
+    "calibratedUniform": 0.0382,
+    "active": 0.03505
+   },
+   "narrowerThanExpertOnly": 3.77,
+   "narrowerThanPpiRawPct": 26,
+   "narrowerThanCalibratedUniformPct": 8.2,
+   "ppiRawAuditsToMatch": 546,
+   "coverage200reps": 0.9519,
+   "meanAbsError": 0.0145
+  },
+  "defaultState": {
+   "seed": 7,
+   "batches": 5,
+   "audits": 344,
+   "meanHalfWidth": 0.04223,
+   "covered": 17,
+   "top": [
+    {
+     "config": "Model A · native CLI",
+     "verifier": 0.6076,
+     "audited": 0.5752,
+     "lo": 0.5159,
+     "hi": 0.6346,
+     "truth": 0.5958,
+     "rank": [
+      1,
+      9
+     ]
+    },
+    {
+     "config": "Model B · native CLI",
+     "verifier": 0.5945,
+     "audited": 0.5764,
+     "lo": 0.5404,
+     "hi": 0.6123,
+     "truth": 0.5897,
+     "rank": [
+      1,
+      7
+     ]
+    },
+    {
+     "config": "Model B · CU + TU",
+     "verifier": 0.5912,
+     "audited": 0.5741,
+     "lo": 0.5336,
+     "hi": 0.6145,
+     "truth": 0.5862,
+     "rank": [
+      1,
+      8
+     ]
+    },
+    {
+     "config": "Model C · CU + TU",
+     "verifier": 0.5823,
+     "audited": 0.6038,
+     "lo": 0.5745,
+     "hi": 0.6331,
+     "truth": 0.5725,
+     "rank": [
+      1,
+      4
+     ]
+    },
+    {
+     "config": "Model C · native CLI",
+     "verifier": 0.5642,
+     "audited": 0.5435,
+     "lo": 0.5036,
+     "hi": 0.5834,
+     "truth": 0.545,
+     "rank": [
+      3,
+      10
+     ]
+    },
+    {
+     "config": "Model D · CU + TU",
+     "verifier": 0.5513,
+     "audited": 0.5038,
+     "lo": 0.4273,
+     "hi": 0.5803,
+     "truth": 0.5285,
+     "rank": [
+      3,
+      13
+     ]
+    },
+    {
+     "config": "Model E · CU + TU",
+     "verifier": 0.5449,
+     "audited": 0.5485,
+     "lo": 0.5005,
+     "hi": 0.5965,
+     "truth": 0.5172,
+     "rank": [
+      2,
+      10
+     ]
+    },
+    {
+     "config": "Model D · native CLI",
+     "verifier": 0.5417,
+     "audited": 0.5353,
+     "lo": 0.4842,
+     "hi": 0.5863,
+     "truth": 0.5463,
+     "rank": [
+      2,
+      11
+     ]
+    },
+    {
+     "config": "Model E · native CLI",
+     "verifier": 0.533,
+     "audited": 0.5409,
+     "lo": 0.4949,
+     "hi": 0.5868,
+     "truth": 0.5152,
+     "rank": [
+      2,
+      11
+     ]
+    },
+    {
+     "config": "Model A · CU + TU",
+     "verifier": 0.5131,
+     "audited": 0.5152,
+     "lo": 0.493,
+     "hi": 0.5373,
+     "truth": 0.4942,
+     "rank": [
+      6,
+      11
+     ]
+    },
+    {
+     "config": "Model F · native CLI",
+     "verifier": 0.4967,
+     "audited": 0.5118,
+     "lo": 0.4664,
+     "hi": 0.5573,
+     "truth": 0.4763,
+     "rank": [
+      5,
+      12
+     ]
+    },
+    {
+     "config": "Model G · native CLI",
+     "verifier": 0.4822,
+     "audited": 0.4673,
+     "lo": 0.4094,
+     "hi": 0.5253,
+     "truth": 0.448,
+     "rank": [
+      9,
+      14
+     ]
+    },
+    {
+     "config": "Model H · native CLI",
+     "verifier": 0.4714,
+     "audited": 0.4641,
+     "lo": 0.4302,
+     "hi": 0.4981,
+     "truth": 0.4452,
+     "rank": [
+      11,
+      13
+     ]
+    },
+    {
+     "config": "Model I · native CLI",
+     "verifier": 0.4509,
+     "audited": 0.4042,
+     "lo": 0.3815,
+     "hi": 0.4269,
+     "truth": 0.4224,
+     "rank": [
+      14,
+      15
+     ]
+    },
+    {
+     "config": "Model F · CU + TU",
+     "verifier": 0.4518,
+     "audited": 0.4191,
+     "lo": 0.3964,
+     "hi": 0.4418,
+     "truth": 0.4313,
+     "rank": [
+      13,
+      15
+     ]
+    },
+    {
+     "config": "Model G · CU + TU",
+     "verifier": 0.3997,
+     "audited": 0.3286,
+     "lo": 0.2831,
+     "hi": 0.374,
+     "truth": 0.3536,
+     "rank": [
+      16,
+      16
+     ]
+    },
+    {
+     "config": "Model H · CU + TU",
+     "verifier": 0.2981,
+     "audited": 0.2483,
+     "lo": 0.2059,
+     "hi": 0.2907,
+     "truth": 0.2563,
+     "rank": [
+      17,
+      18
+     ]
+    },
+    {
+     "config": "Model I · CU + TU",
+     "verifier": 0.2567,
+     "audited": 0.1893,
+     "lo": 0.1484,
+     "hi": 0.2302,
+     "truth": 0.2002,
+     "rank": [
+      17,
+      18
+     ]
+    }
+   ],
+   "triageTop10TrulyWeak": 4
+  }
+ },
+ "curves": {
+  "expertOnly": [
+   {
+    "audits": 60,
+    "halfWidth": 0.36817,
+    "coverage": 0.825
+   },
+   {
+    "audits": 120,
+    "halfWidth": 0.21529,
+    "coverage": 0.875
+   },
+   {
+    "audits": 180,
+    "halfWidth": 0.17453,
+    "coverage": 0.9028
+   },
+   {
+    "audits": 240,
+    "halfWidth": 0.14931,
+    "coverage": 0.9125
+   },
+   {
+    "audits": 300,
+    "halfWidth": 0.13198,
+    "coverage": 0.9097
+   },
+   {
+    "audits": 360,
+    "halfWidth": 0.11944,
+    "coverage": 0.9194
+   },
+   {
+    "audits": 420,
+    "halfWidth": 0.10888,
+    "coverage": 0.9361
+   },
+   {
+    "audits": 480,
+    "halfWidth": 0.10098,
+    "coverage": 0.9306
+   },
+   {
+    "audits": 540,
+    "halfWidth": 0.09422,
+    "coverage": 0.9208
+   },
+   {
+    "audits": 600,
+    "halfWidth": 0.08888,
+    "coverage": 0.9264
+   }
+  ],
+  "ppiRaw": [
+   {
+    "audits": 60,
+    "halfWidth": 0.08419,
+    "coverage": 0.6625
+   },
+   {
+    "audits": 120,
+    "halfWidth": 0.07032,
+    "coverage": 0.825
+   },
+   {
+    "audits": 180,
+    "halfWidth": 0.06015,
+    "coverage": 0.8792
+   },
+   {
+    "audits": 240,
+    "halfWidth": 0.05289,
+    "coverage": 0.8889
+   },
+   {
+    "audits": 300,
+    "halfWidth": 0.04736,
+    "coverage": 0.9069
+   },
+   {
+    "audits": 360,
+    "halfWidth": 0.04349,
+    "coverage": 0.9208
+   },
+   {
+    "audits": 420,
+    "halfWidth": 0.04043,
+    "coverage": 0.9319
+   },
+   {
+    "audits": 480,
+    "halfWidth": 0.03763,
+    "coverage": 0.9361
+   },
+   {
+    "audits": 540,
+    "halfWidth": 0.03524,
+    "coverage": 0.9417
+   },
+   {
+    "audits": 600,
+    "halfWidth": 0.03339,
+    "coverage": 0.9458
+   }
+  ],
+  "calibratedUniform": [
+   {
+    "audits": 60,
+    "halfWidth": 0.07152,
+    "coverage": 0.85
+   },
+   {
+    "audits": 120,
+    "halfWidth": 0.05897,
+    "coverage": 0.9528
+   },
+   {
+    "audits": 180,
+    "halfWidth": 0.0489,
+    "coverage": 0.9486
+   },
+   {
+    "audits": 240,
+    "halfWidth": 0.0427,
+    "coverage": 0.9556
+   },
+   {
+    "audits": 300,
+    "halfWidth": 0.0382,
+    "coverage": 0.9514
+   },
+   {
+    "audits": 360,
+    "halfWidth": 0.03488,
+    "coverage": 0.9583
+   },
+   {
+    "audits": 420,
+    "halfWidth": 0.03253,
+    "coverage": 0.9583
+   },
+   {
+    "audits": 480,
+    "halfWidth": 0.03027,
+    "coverage": 0.9472
+   },
+   {
+    "audits": 540,
+    "halfWidth": 0.02831,
+    "coverage": 0.95
+   },
+   {
+    "audits": 600,
+    "halfWidth": 0.02677,
+    "coverage": 0.9444
+   }
+  ],
+  "active": [
+   {
+    "audits": 60,
+    "halfWidth": 0.07152,
+    "coverage": 0.85
+   },
+   {
+    "audits": 120,
+    "halfWidth": 0.05562,
+    "coverage": 0.9597
+   },
+   {
+    "audits": 180,
+    "halfWidth": 0.04587,
+    "coverage": 0.9569
+   },
+   {
+    "audits": 240,
+    "halfWidth": 0.03963,
+    "coverage": 0.9556
+   },
+   {
+    "audits": 300,
+    "halfWidth": 0.03505,
+    "coverage": 0.9431
+   },
+   {
+    "audits": 360,
+    "halfWidth": 0.03172,
+    "coverage": 0.9514
+   },
+   {
+    "audits": 420,
+    "halfWidth": 0.02927,
+    "coverage": 0.95
+   },
+   {
+    "audits": 480,
+    "halfWidth": 0.02711,
+    "coverage": 0.9528
+   },
+   {
+    "audits": 540,
+    "halfWidth": 0.02532,
+    "coverage": 0.9472
+   },
+   {
+    "audits": 600,
+    "halfWidth": 0.02377,
+    "coverage": 0.9569
+   }
+  ]
+ }
+}

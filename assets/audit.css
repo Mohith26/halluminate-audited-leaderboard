@@ -1,0 +1,54 @@
+/* Audited leaderboard: additions built from the site's own tokens (--g0x, --sky, --deep). */
+.ddb .aud-frame{margin:24px 0 0;padding:20px 0;border-top:1px solid var(--g03);border-bottom:1px solid var(--g03)}
+.ddb h4.ta-l1{margin-top:72px}
+.aud-loading{margin:0;padding:120px 0;color:var(--g05);text-align:center}
+.chart-tabs sup.aud-new{margin-left:6px;font-size:10px;line-height:1;letter-spacing:.02em;color:var(--deep);vertical-align:4px}
+.chart-tabs button[aria-selected="true"] sup.aud-new{color:var(--g09)}
+.aud-col{cursor:pointer;outline:none}
+.aud-col .aud-hit{transition:fill .15s}
+.aud-col:hover .aud-hit,.aud-col:focus-visible .aud-hit{fill:rgba(135,206,235,.12)!important}
+.aud-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin-top:20px}
+.aud-alloc{margin:0}
+.aud-check{display:inline-flex;align-items:center;gap:8px;font-size:14px;line-height:20px;color:var(--g09);cursor:pointer}
+.aud-check span{color:var(--g07)}
+.aud-check .checkbox{pointer-events:auto}
+.aud-tablewrap{margin-top:20px}
+.ddb .aud-table td:nth-child(-n+2){text-align:left}
+.aud-table tbody tr{cursor:pointer;transition:background-color .15s}
+.aud-table tbody tr:hover,.aud-table tbody tr:focus-visible{background:var(--g02);outline:none}
+.aud-table tbody tr.is-sel{background:rgba(135,206,235,.22)}
+.aud-neg{color:var(--deep)}
+.aud-lede{margin:0!important;font-size:16px;line-height:24px;color:var(--g09)}
+.aud-note{margin:12px 0 0!important;font-size:14px;line-height:20px;color:var(--g07)}
+.aud-actions{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 28px;margin-top:16px}
+.aud-actions .cta,.aud-actions .text-button{margin-top:0;padding:0;border:0;background:none;font-family:var(--font);letter-spacing:0;cursor:pointer}
+.aud-actions .cta{font-size:16px;color:var(--g09)}
+.aud-actions .cta:hover{color:var(--accent-text)}
+.aud-actions .cta:disabled{color:var(--g04);cursor:not-allowed}
+.aud-actions .text-button{font-size:16px;color:var(--g07)}
+.aud-actions .text-button:hover:not(:disabled){color:var(--accent-text)}
+.aud-actions .text-button:disabled{color:var(--g04);cursor:default}
+.aud-meta{margin-left:auto;font-size:12px;color:var(--g07)}
+.aud-drill{margin-top:24px!important}
+.aud-drillhead{display:flex;align-items:baseline;justify-content:space-between}
+.aud-x{border:0;background:none;color:var(--g07);font:inherit;font-size:14px;cursor:pointer;padding:0}
+.aud-x:hover{color:var(--accent-text)}
+.aud-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.aud-stats div{padding-top:10px;border-top:1px solid var(--g03)}
+.aud-stats span{display:block;font-size:12px;line-height:16px;color:var(--g07)}
+.aud-stats b{display:block;margin-top:4px;font-weight:400;font-size:20px;line-height:24px;letter-spacing:-.4px;color:var(--g09);font-variant-numeric:tabular-nums}
+.aud-sub{margin-top:20px;padding-top:16px;border-top:1px solid var(--g03)}
+.aud-subtitle{margin:0 0 12px!important;font-size:14px;line-height:20px;color:var(--g09)}
+.aud-mini td:first-child{text-align:left}
+.aud-mini tr.aud-flip td{color:var(--deep)}
+.aud-pbar{display:inline-block;width:56px;height:6px;margin-right:8px;background:var(--g03);vertical-align:1px}
+.aud-pbar i{display:block;height:100%;background:var(--deep)}
+.aud-foot{margin-top:72px!important;padding-top:20px;border-top:1px solid var(--g03);font-size:12px;line-height:16px;color:var(--g07)}
+.aud-foot a{color:inherit}
+.aud-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);padding:10px 16px;background:var(--g09);color:#fff;font-size:14px;line-height:20px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+.aud-toast.show{opacity:1;transform:translate(-50%,0)}
+#app.is-busy .chart-view,#app.is-busy .aud-frame{opacity:.5;transition:opacity .15s}
+@media (max-width:900px){.aud-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.aud-meta{margin-left:0}}
+.aud-frame .chart-units{margin:12px 0 0!important;font-size:14px;line-height:20px;letter-spacing:0;color:var(--g07)}
+.aud-frame .chart-units b{font-weight:400;color:var(--g09)}
+.aud-frame .chart-legend{margin-top:6px}
